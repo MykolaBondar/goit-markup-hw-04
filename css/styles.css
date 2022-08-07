@@ -154,7 +154,9 @@ button {
   margin-right: 10px;
 }
 .link:hover .icon-mail,
-.link:hover .icon-tel {
+.link:hover .icon-tel,
+.link:focus .icon-mail,
+.link:focus .icon-tel {
   fill: currentColor;
 }
 
@@ -317,6 +319,7 @@ button {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+  background-color: var(--white-color);
 }
 .team-head {
   padding-left: 10px;
@@ -345,11 +348,13 @@ button {
 .icon-social {
   fill: #afb1b8;
 }
-.team-icon-list .icon-link:hover {
+.team-icon-list .icon-link:hover,
+.team-icon-list .icon-link:focus {
   background-color: var(--btn-color);
   border-radius: 50%;
 }
-.icon-link:hover .icon-social {
+.icon-link:hover .icon-social,
+.icon-link:focus .icon-social {
   fill: var(--white-color);
 }
 .title-clients {
@@ -369,7 +374,11 @@ button {
   margin-left: auto;
   margin-right: auto;
 }
-.clients-list-icon {
+
+.clients-list-icon + .clients-list-icon {
+  margin-left: 30px;
+}
+.clients-link {
   border: 1px solid #afb1b8;
   border-radius: 4px;
   width: 170px;
@@ -378,16 +387,14 @@ button {
   justify-content: center;
   align-items: center;
 }
-.clients-list-icon:hover {
+.clients-link:hover,
+.clients-link:focus {
+  fill: var(--btn-color);
   border: 1px solid var(--btn-color);
+  border-radius: 4px;
 }
-.clients-list-icon + .clients-list-icon {
-  margin-left: 30px;
-}
-.clients-link {
-  display: block;
-}
-.clients-link:hover .icon-clients {
+.clients-link:hover .icon-clients,
+.clients-link:focus .icon-clients {
   fill: var(--btn-color);
 }
 .icon-clients {
@@ -465,10 +472,12 @@ button {
 .icon-footer-social {
   fill: var(--white-color);
 }
-.footer-icon-list .icon-link:hover {
+.footer-icon-list .icon-link:hover,
+.footer-icon-list .icon-link:focus {
   background-color: var(--btn-color);
 }
-.icon-link:hover .icon-footer-social {
+.icon-link:hover .icon-footer-social,
+.icon-link:focus .icon-footer-social {
   fill: var(--white-color);
 }
 /* PORTFOLIO */
@@ -544,4 +553,14 @@ button {
   border-bottom: 1px solid #eeeeee;
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
+}
+.examples-link {
+  display: block;
+}
+
+.examples-link:hover,
+.examples-link:focus {
+  border: 1px solid #eeeeee;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
